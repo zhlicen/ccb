@@ -1,0 +1,3 @@
+go build --ldflags '-extldflags "-static"' -buildmode=c-archive -o libccb.a ccb.go
+gcc -c ccb_test.c -o ccb_test.o
+gcc ccb_test.o libccb.a libccbc.a -o ccb_test.out
