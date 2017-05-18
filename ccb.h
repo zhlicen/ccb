@@ -1,11 +1,11 @@
 #ifndef _CCB_H_
 #define _CCB_H_
 // Callback definition
-typedef int (*PCb)(int);
+typedef int (*PCb)(char**, int);
 extern void SetCb(PCb pf);
 
 // Interface for go to call this callback
-extern void CallC(int var);
+extern void CallC(char** str_slice, int size);
 
 #endif
 

@@ -5,9 +5,10 @@
 /* Start of preamble from import "C" comments.  */
 
 
-#line 3 "D:\\samzho\\code\\go\\src\\ccb\\ccb.go"
+#line 3 "/mnt/d/samzho/code/go/src/ccb/ccb.go"
 
 
+#include <stdlib.h>
 #include "ccb.h"
 
 #line 1 "cgo-generated-wrapper"
