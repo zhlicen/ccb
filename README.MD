@@ -1,6 +1,6 @@
 # CCB
 
-## C callback from go example
+## Example of C callback from go
 
 ### Background
 
