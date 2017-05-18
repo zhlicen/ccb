@@ -11,7 +11,7 @@ This example shows how to implement a C callback from go.
 
 - C Bridge: ccb.c/ccb.h
 - Go Library: ccb.go
-- C Program: ccb_test.go
+- C Application: ccb_test.c
 
 ## Usage
 
