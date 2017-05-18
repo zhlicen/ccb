@@ -1,3 +1,5 @@
+gcc -c ccb.c -o ccb.o
+ar -rvs libccbc.a ccb.o
 go build --ldflags '-extldflags "-static"' -buildmode=c-archive -o libccb.a ccb.go
 gcc -c ccb_test.c -o ccb_test.o
-gcc ccb_test.o libccb.a libccbc.a -o ccb_test.out
+gcc ccb_test.o -pthread libccb.a libccbc.a -o ccb_test.out

@@ -3,6 +3,6 @@
 
 int main() {
     printf("C");
-    CallGo(1);
+    CallGo(12333);
     return 0;
 }

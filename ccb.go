@@ -9,7 +9,7 @@ import "fmt"
 
 //export CallGo
 func CallGo(param int) {
-	fmt.Println("go:CallGo: %d", param)
+	fmt.Println("go:CallGo:", param)
 	C.CallC(C.int(param))
 }
 
