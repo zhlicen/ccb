@@ -19,16 +19,14 @@ func CallGo(param int) {
 	// convert the C array to a Go Array so we can index it
 	a := (*[1<<30 - 1]*C.char)(cArray)
 	idx := 0
-	for idx < param {
+	for idx := 0; idx < param; idx++ {
 		a[idx] = C.CString(fmt.Sprintf("go string slice:%d", idx))
-		idx = idx + 1
 	}
 
 	fmt.Println("go:CallGo:", param)
 	C.CallC((**C.char)(cArray), C.int(param))
-	for idx < param {
+	for idx := 0; idx < param; idx++ {
 		C.free(unsafe.Pointer(a[idx]))
-		idx = idx + 1
 	}
 	C.free(unsafe.Pointer(a))
 }
